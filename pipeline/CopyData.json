@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Copy Raw_1 to Raw_1",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -47,6 +47,28 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Get Raw_1 metadata",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "Azure_Udemy_Raw_1",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"columnCount"
+					]
+				}
 			}
 		],
 		"annotations": []
