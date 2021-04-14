@@ -22,7 +22,7 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"preCopyScript": "TRUNCATE TABLE dbo.raw_1",
+						"preCopyScript": "TRUNCATE TABLE dbo.raw_1;\n\ninsert into dbo.raw_1\n(id, value)\nselect 1, 'this'\nunion \nselect 2, 'that';\n",
 						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
