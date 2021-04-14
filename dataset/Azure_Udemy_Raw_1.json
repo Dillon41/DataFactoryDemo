@@ -1,0 +1,26 @@
+{
+	"name": "Azure_Udemy_Raw_1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Azure_Udemy_DB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "value",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "raw_1"
+		}
+	}
+}
